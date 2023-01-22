@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Positions";
+}
+@model IEnumerable<Position>
+<div class="text-center">
+    <h2 class="display-4">Positions</h2>
+    <table class="table table-dark" style="margin: auto; width: 50%">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var position in Model)
+            {
+                <tr>
+                    <td>@position.Id</td>
+                    <td>@position.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

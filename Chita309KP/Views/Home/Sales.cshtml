@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Sales";
+}
+@model IEnumerable<Sales>
+<div class="text-center">
+    <h2 class="display-4">Sales</h2>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th>Phone ID</th>
+                <th>Worker's ID</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sales in Model)
+            {
+                <tr>
+                    <td>@sales.Id</td>
+                    <td>@sales.Phone_id</td>
+                    <td>@sales.Worker_id</td>
+                    <td>@sales.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

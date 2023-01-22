@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Edit phone";
+}
+@model Phone
+<div class="text-center">
+    <form method="post" style="width: 30%; margin: auto">
+        <div class="form-group">
+            <label>Name</label>
+            <input class="form-control" type="text" name="phone_name" value="@Model.Phone_name" />
+        </div>
+        <div class="form-group">
+            <label>Color</label>
+            <input class="form-control" type="text" name="color" value="@Model.Color" />
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input class="form-control" type="number" name="price" min="0" value="@Model.Price" />
+            <small class="text-muted">*in UAH</small>
+        </div>
+        <div class="form-group">
+            <label>Sales date</label><br />
+            <input class="form-control" type="datetime-local" name="sales_date" value="@Model.Sales_date" />
+        </div>
+        <div class="form-group">
+            <label>Supplier's ID</label>
+            <input class="form-control" type="number" name="supplier_id" min="1" value="@Model.Supplier_id" />
+        </div>
+        <button type="submit" class="btn btn-outline-success btn-lg">Edit</button>
+    </form>
+</div>
